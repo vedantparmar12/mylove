@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-rose-50: #fff1f2;
+  --color-rose-100: #ffe4e6;
+  --color-rose-300: #fda4af;
+  --color-rose-400: #fb7185;
+  --color-rose-500: #f43f5e;
+  --color-rose-600: #e11d48;
+  --color-emerald-500: #10b981;
+  --color-green-600: #059669;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(-45deg, #dcfce7, #d1fae5, #a7f3d0, #bbf7d0);
+  background-size: 400% 400%;
+  animation: gradient 12s ease infinite;
+}
+
+@keyframes gradient {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ── Glassmorphism Card ── */
+.glass-card {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1.5px solid rgba(255, 255, 255, 0.8);
+  box-shadow:
+    0 8px 32px rgba(16, 185, 129, 0.12),
+    0 1px 3px rgba(0,0,0,0.06);
+}
+
+/* ── YES Button ── */
+.yes-btn {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  padding: 16px 40px;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  box-shadow:
+    0 0 0 0 rgba(16, 185, 129, 0.4),
+    0 4px 20px rgba(16, 185, 129, 0.35);
+  transition: box-shadow 0.3s ease;
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.yes-btn:hover {
+  box-shadow:
+    0 0 0 6px rgba(16, 185, 129, 0.15),
+    0 8px 40px rgba(16, 185, 129, 0.5);
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(16,185,129,0.4), 0 4px 20px rgba(16,185,129,0.35); }
+  50%      { box-shadow: 0 0 0 8px rgba(16,185,129,0.1), 0 4px 30px rgba(16,185,129,0.45); }
+}
+
+/* ── NO Button ── */
+.no-btn {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ef4444;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 14px 32px;
+  border-radius: 9999px;
+  border: 1.5px solid rgba(239, 68, 68, 0.2);
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.no-btn:hover {
+  background: white;
+  border-color: rgba(239, 68, 68, 0.4);
+}
+
+/* ── Celebration Text ── */
+.celebration-text {
+  background: linear-gradient(135deg, #10b981, #059669, #34d399);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ── Receipt ── */
+.receipt {
+  background: #fefcf3;
+  padding: 24px;
+  margin-top: 8px;
+  width: 100%;
+  max-width: 380px;
+  border-top: 8px solid #10b981;
+  border-radius: 4px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  position: relative;
+}
+
+.receipt::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(135deg, #fefcf3 33.33%, transparent 33.33%) -12px 0,
+              linear-gradient(225deg, #fefcf3 33.33%, transparent 33.33%) -12px 0;
+  background-size: 16px 16px;
+}
+
+/* ── GIF Container ── */
+.gif-container {
+  width: 220px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 4px solid rgba(255,255,255,0.5);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  background: rgba(255,255,255,0.3);
+}
+
+.shrek-gif {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gif-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+  font-size: 64px;
+}
+
+/* ── Floating Hearts ── */
+.floating-hearts {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.heart {
+  position: absolute;
+  bottom: -30px;
+  animation: float-up linear infinite;
+}
+
+@keyframes float-up {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.3;
+  }
+  90% {
+    opacity: 0.15;
+  }
+  100% {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
