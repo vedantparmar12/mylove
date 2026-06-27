@@ -24,7 +24,7 @@ const shrekGifs = [
   "https://media.tenor.com/TSMSms25puIAAAAC/shrek-gravewalker.gif",
 ];
 
-const celebrationGif = "https://media.tenor.com/mtiOW6O-k8YAAAAC/shrek-shrek-rizz.gif";
+const celebrationGif = "https://media.tenor.com/7AUeNckxG-kAAAAC/shrekdam.gif";
 
 // Generate static stars so they don't re-randomise on re-render
 const STARS = Array.from({ length: 60 }, (_, i) => ({
