@@ -123,7 +123,7 @@ export default function App() {
               Yay! She said YES! 💖
             </h1>
             <p className="text-lg md:text-xl text-gray-600 font-semibold -mt-2">
-              Shrek approved this relationship ✅
+              Shrek approved this relationship
             </p>
             
             {/* Receipt */}
@@ -137,7 +137,7 @@ export default function App() {
                 <h3 className="text-center font-bold text-lg mb-4 text-gray-900 tracking-[0.2em] border-b-2 border-dashed border-gray-300 pb-4">
                   ✦ OFFICIAL DATE RECEIPT ✦
                 </h3>
-                <div className="flex justify-between mb-2"><span className="text-gray-500">ITEM:</span> <span className="font-bold">1x CUTE BOYFRIEND</span></div>
+                <div className="flex justify-between mb-2"><span className="text-gray-500">ITEM:</span> <span className="font-bold">1 cute boyfriend (Vedant)</span></div>
                 <div className="flex justify-between mb-2"><span className="text-gray-500">PRICE:</span> <span className="font-bold">PRICELESS</span></div>
                 <div className="flex justify-between mb-2"><span className="text-gray-500">DATE:</span> <span className="font-bold">ASAP</span></div>
                 <div className="flex justify-between mb-4"><span className="text-gray-500">VENUE:</span> <span className="font-bold">YOUR CHOICE</span></div>
