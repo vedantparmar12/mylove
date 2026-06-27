@@ -93,7 +93,7 @@ export default function App() {
             animationDuration: `${6 + Math.random() * 6}s`,
             fontSize: `${14 + Math.random() * 20}px`,
             opacity: 0.15 + Math.random() * 0.2,
-          }}>💖</span>
+          }}>💙</span>
         ))}
       </div>
 
@@ -120,7 +120,7 @@ export default function App() {
             </motion.div>
 
             <h1 className="text-4xl md:text-6xl font-black tracking-tight px-4 celebration-text">
-              Yay! She said YES! 💖
+              Yay! She said YES! 💙
             </h1>
             <p className="text-lg md:text-xl text-gray-600 font-semibold -mt-2">
               Shrek approved this relationship
@@ -143,7 +143,7 @@ export default function App() {
                 <div className="flex justify-between mb-4"><span className="text-gray-500">VENUE:</span> <span className="font-bold">YOUR CHOICE</span></div>
                 <div className="border-t-2 border-dashed border-gray-300 pt-4 text-center text-xs opacity-60">
                   <p>Keep this receipt safe. No refunds.</p>
-                  <p className="mt-1">I love you so much! 💖🌸</p>
+                  <p className="mt-1">I love you so much! 💙✨</p>
                 </div>
               </div>
             </motion.div>
@@ -189,7 +189,7 @@ export default function App() {
             
             <h1 className="text-3xl md:text-5xl font-black text-gray-800 tracking-tight px-2 leading-tight">
               Will you be my{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-pink-600">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-600">
                 girlfriend?
               </span>
             </h1>
@@ -215,7 +215,7 @@ export default function App() {
                 style={{ transformOrigin: "center" }}
                 onClick={handleYesClick}
               >
-                Yes 💖
+                Yes 💙
               </motion.button>
               
               {/* NO Button — stays in layout flow */}
